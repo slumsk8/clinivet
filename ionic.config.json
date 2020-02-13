@@ -1,0 +1,8 @@
+{
+  "name": "vetclinic",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

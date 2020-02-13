@@ -1,0 +1,172 @@
+ion-header{    
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;  
+    height: 20vh;         
+    border: 2px solid var(--ion-color-primary); 
+    background-image: url('../../../assets/imgs/vet.png');        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.top{
+    margin: 0;
+    display: flex;    
+    height: 6vh;
+    align-items: center;
+    --background: var(--ion-color-primary);
+}
+.titulo{    
+    display: grid;    
+    grid-template-areas: 'a a c';
+    color: white;
+    
+    ion-title{
+        text-align: left;
+        grid-area: a;
+    }
+    ion-buttons{        
+        display: grid;
+        justify-items: right;
+        grid-area: c;
+
+        ion-back-button{
+            --icon-font-size: 30px;
+        }
+    }
+    // background-color: var(--ion-color-primary);
+}
+.imagem{
+    width: 96px;
+    height: 96px;
+    opacity: 100%;
+    background-image: url('../../../assets/icon/dog.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+
+.container{    
+    height: 100%;
+    display: grid; 
+    align-items: center;
+    .centro{
+        display: grid;
+        justify-items: center;
+        
+        ion-input{
+            margin: 0 auto;                                
+            width: 70%;
+            box-shadow: 2px 1px #ccc;            
+            border-radius: 10px;
+        }
+    }
+    ion-button{        
+        --border-radius: 10px;
+        --box-shadow: 2px 1px #ccc;
+        font-weight: bold;                
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }    
+    .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 90%;
+
+        .nasc{
+            box-shadow: 2px 1px #ccc;            
+            border-radius: 10px;
+        }
+        .raca{
+            width: 100% !important;
+        }
+    }
+}
+ion-footer{
+    text-align: center;
+}
+
+.tutor{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {      
+    .container{    
+        height: 100%;
+        display: grid; 
+        align-items: center;
+        font-size: 24px;
+        .centro{
+            display: grid;
+            justify-items: center;
+            
+            ion-input{
+                margin: 0 auto;                                
+                width: 70%;
+                box-shadow: 2px 1px #ccc;            
+                border-radius: 10px;
+            }
+        }
+        ion-button{        
+            --border-radius: 10px;
+            --box-shadow: 2px 1px #ccc;
+            font-weight: bold;                
+            width: 30%;
+            margin: 0 auto;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }    
+        .info{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+    
+            .nasc{
+                box-shadow: 2px 1px #ccc;            
+                border-radius: 10px;
+            }
+            .raca{
+                width: 100% !important;
+            }
+        }
+    }
+    ion-footer{
+        text-align: center;
+    }
+    
+    .tutor{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    ion-footer{
+        text-align: center;
+    }
+    .imagem{
+        width: 248px;
+        height: 248px;
+        opacity: 100%;
+        background-image: url('../../../assets/icon/dog.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        margin: auto;
+    }
+    ion-select{
+        font-size: 24px;
+    }
+}

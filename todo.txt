@@ -1,0 +1,7 @@
+Vetclinica
+
+TODO: {
+   Adicionar opção de escolher se é canina ou felina
+	se for canino imagem do cachorro.
+	se for felino imagem do gato.
+}

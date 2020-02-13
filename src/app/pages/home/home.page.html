@@ -1,0 +1,63 @@
+<ion-header></ion-header>
+<ion-content>
+  <div class="centro">
+    <ion-grid fixed class="ion-text-center content">
+      <ion-row>
+        <ion-col>
+          <ion-button class="menubtn" expand="block" fill="outilne" color="primary" [routerLink]="['/tutor-form/new']">
+            <ion-icon class="iconeMenu" slot="icon-only"
+              style="background-image: url('../../../assets/icon/tutor.png');"></ion-icon>
+          </ion-button>
+          <ion-label>TUTOR</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button class="menubtn" expand="block" fill="outilne" color="primary" [routerLink]="['/pet-form/new']">
+            <ion-icon class="iconeMenu" slot="icon-only" style="background-image: url('../../../assets/icon/dog.png');">
+            </ion-icon>
+          </ion-button>
+          <ion-label>PET</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="menubtn" expand="block" fill="outilne" color="primary" [routerLink]="['/consulta/new']">
+            <ion-icon class="iconeMenu" slot="icon-only"
+              style="background-image: url('../../../assets/icon/consulta.png');"></ion-icon>
+          </ion-button>
+          <ion-label>CONSULTA</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button class="menubtn" expand="block" fill="outilne" color="primary" [routerLink]="['/buscas']">
+            <ion-icon class="iconeMenu" slot="icon-only"
+              style="background-image: url('../../../assets/icon/busca.png');"></ion-icon>
+          </ion-button>
+          <ion-label>PESQUISAR</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="rodape ion-text-center">
+    <ion-grid class="redessociais">
+      <ion-row class="linharodape">
+        <ion-col>
+          <ion-button (click)="sendCall()" class="meligue">
+            <!-- <ion-icon class="social" slot="icon-only" style="background-image: url('../../../assets/icon/telefone.png');"></ion-icon> -->
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="whatsapp" (click)="goWhastApp()">            
+            <!-- <ion-icon class="social" slot="icon-only" style="background-image: url('../../../assets/icon/whatsapp.png');"></ion-icon> -->
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="instagram" (click)="goInstagram()">
+            <!-- <ion-icon class="social" slot="icon-only" style="background-image: url('../../../assets/icon/instagram.png');"></ion-icon> -->
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

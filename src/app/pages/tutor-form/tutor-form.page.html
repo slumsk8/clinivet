@@ -1,0 +1,29 @@
+<ion-header></ion-header>
+<ion-toolbar class="top">
+  <div class="titulo">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button icon="arrow-dropleft" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </div>
+  <!-- <img src="assets/imgs/vet.png"> -->
+</ion-toolbar>
+
+
+<ion-content>
+  <div class="container">
+    <div class="centro ion-text-center">
+      <div class="imagem"></div>
+      <ion-input autocapitalize="on" [(ngModel)]="tutor.nome_tutor" placeholder="Nome"></ion-input>
+      <ion-input placeholder="E-mail" [(ngModel)]="tutor.email"></ion-input>
+      <ion-input placeholder="Telefone" [(ngModel)]="tutor.telefone"></ion-input>      
+      <ion-button id="btnSalvar" color="primary" (click)="onSubmit()" style="margin-top: 30px;">Salvar</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center">
+    <img src="assets/imgs/rod.png">
+  </ion-toolbar>
+</ion-footer>

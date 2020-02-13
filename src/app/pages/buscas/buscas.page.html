@@ -1,0 +1,48 @@
+<ion-header></ion-header>
+<ion-toolbar class="top">
+  <div class="titulo">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button icon="arrow-dropleft" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </div>
+</ion-toolbar>
+
+
+<ion-content>
+  <div class="centro">
+    <ion-grid fixed class="ion-text-center">
+      <ion-row>
+        <ion-col>
+          <ion-button class="menubtn" fill="outilne" expand="block" color="primary" [routerLink]="'/tutor-list'">
+            <ion-icon class="iconeMenu" slot="icon-only"
+              style="background-image: url('../../../assets/icon/tutor.png');"></ion-icon>
+          </ion-button>
+          <ion-label>TUTOR</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button class="menubtn" fill="outilne" expand="block" color="primary" [routerLink]="'/pet-list'">
+            <ion-icon class="iconeMenu" slot="icon-only" style="background-image: url('../../../assets/icon/dog.png');">
+            </ion-icon>
+          </ion-button>
+          <ion-label>PET</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="menubtn" fill="outilne" expand="block" color="primary" routerLink="/consulta-list">
+            <ion-icon class="iconeMenu" slot="icon-only"
+              style="background-image: url('../../../assets/icon/consulta.png');"></ion-icon>
+          </ion-button>
+          <ion-label>CONSULTA</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center">
+    <img src="assets/imgs/rod.png">
+  </ion-toolbar>
+</ion-footer>

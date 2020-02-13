@@ -1,0 +1,47 @@
+<ion-header></ion-header>
+<ion-toolbar class="top">
+  <div class="titulo">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button icon="arrow-dropleft" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <div class="container">
+    <div class="centro ion-text-center">
+      <ion-datetime displayFormat="DD, MMMM YYYY" [monthNames]="monthNames" [dayShortNames]="dayShortNames"
+        [doneText]='"Ok"' [cancelText]='"Cancelar"' [(ngModel)]="consulta.dia" placeholder="Dia"></ion-datetime>
+      <!-- <ion-input placeholder="Dia" autocapitalize="on" [(ngModel)]="consulta.dia"></ion-input> -->
+      <ion-datetime [doneText]='"Ok"' [cancelText]='"Cancelar"' [(ngModel)]="consulta.horario" displayFormat="HH:mm"
+        placeholder="Hora da Consulta"></ion-datetime>
+      <!-- <ion-input placeholder="Horario" [(ngModel)]="consulta.horario"></ion-input> -->
+      <div class="pet">
+        <ion-item lines="none">
+          <ion-select [(ngModel)]="consulta.id_pet" placeholder="Pet">
+            <ion-select-option *ngFor="let pet of pets" value="{{ pet.id_pet }}">{{ pet.nome_pet }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <div class="medvet">
+        <img src="assets/imgs/cruz.png">
+      </div>
+      <ion-button color="primary" (click)="onSubmit()" style="margin-top: 30px;">Salvar</ion-button>
+    </div>
+  </div>
+  <!-- <div class="tutor">
+      <ion-item lines="none">
+        <ion-select  [(ngModel)]="consulta.idtutor" placeholder="Tutor">
+          <ion-select-option *ngFor="let pet of pets" value="{{ pet.idtutor }}">{{ pet.nomeTutor }}</ion-select-option>
+        </ion-select>
+      </ion-item>    
+    </div> -->
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center">
+    <img src="assets/imgs/rod.png">
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,289 @@
+//GERAL
+ion-header{    
+    width: 100%;  
+    height: 20vh;          
+    background-image: url('../../../assets/imgs/vet.png');    
+    border: 2px solid var(--ion-color-primary);     
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ion-button{
+    width: 128px;     
+    height: 128px;    
+    --border-radius: 50%;
+}
+ion-grid{    
+    display: grid;
+    // border: 2px solid var(--ion-color-primary);
+    // background-color: var(--ion-color-primary);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 10px;
+    width: 100%;
+    height: 100%;
+    // --ion-grid-width-xs: 100%;
+    // --ion-grid-width-sm: 100%;
+    // --ion-grid-width-md: 80%;
+    // --ion-grid-width-lg: 70%;
+    // --ion-grid-width-xl: 50%;
+}
+
+//TOPO
+.centro{
+    display: grid;    
+    justify-items: center;    
+    height: 100%;
+}
+// .content{         
+//     display: grid;    
+//     justify-items: center;
+//     align-items: center;
+//     width: 90%;
+//     height: 100%;
+// }
+
+//BOTÕES DO MENU
+ion-label{    
+    font-size: 14px;    
+    font-weight: bold;    
+}
+.menubtn{             
+    margin-left: 15px;        
+    margin-right: 15px;
+    margin-top: 0px;
+    border-radius: 50%;
+    border: 2px solid var(--ion-color-primary);
+} 
+.iconeMenu{
+    font-size: 96px;
+    background-size: 96px;
+    background-position: center;
+}
+
+
+//BOTÕES DO RODAPÉ
+.rodape{    
+    display: grid;
+    align-items: center;
+    height: 100%;   
+    border-top: 1px solid white;
+}
+.linharodape{
+    width: 100%;
+    background-color: #fff;
+    // border: 2px solid var(--ion-color-secondary);
+}
+.redessociais{        
+    background: none;
+}
+.meligue{    
+    border: 2px solid #e0b500;
+    width: 48px;
+    height: 48px;     
+    border-radius: 50%;
+    --background: none;
+    background-image: url('../../../assets/icon/telefone.png');    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+}
+.whatsapp{    
+    border: 2px solid var(--ion-color-primary);
+    width: 48px;
+    height: 48px;     
+    border-radius: 50%;
+    --background: none;
+    background-image: url('../../../assets/icon/whatsapp.png');    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+}
+.instagram{    
+    border: 2px solid #f04141;
+    width: 48px;
+    height: 48px;     
+    border-radius: 50%;
+    --background: none;
+    background-image: url('../../../assets/icon/instagram.png');    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+}
+
+
+p{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {   
+    .topo{
+        height: auto;
+        padding: 0;
+    }    
+    ion-footer{             
+        height: 15%;     
+    }
+    img{
+        margin: 0;
+        width: 100%;
+    } 
+    ion-button{    
+        width: 280px;     
+        height: 280px;
+        --border-radius: 50%;
+        margin-bottom: 20px;
+        margin-left: 40px;        
+        margin-right: 40px;
+    }
+    .iconeMenu{
+        font-size: 128px;
+        background-size: 128px;                
+    }
+    ion-label{    
+        font-size: 24px;
+    }
+    ion-icon{
+        margin-left: 10px;        
+        margin-right: 10px;
+        font-size: 148px;
+        background-size: 148px;
+    }
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .meligue{    
+        width: 128px;
+        height: 128px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/telefone.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 110px;
+    }
+    .whatsapp{    
+        width: 128px;
+        height: 128px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/whatsapp.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 128px;
+    }
+    .instagram{    
+        width: 128px;
+        height: 128px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/instagram.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 110px;
+    }
+}
+
+@media screen and (max-width: 320px) {   
+    .topo{
+        height: 100px;
+        padding: 0;
+    }    
+    img{
+        margin: 0;
+        width: 100%;
+    } 
+    ion-button{    
+        width: 100px;     
+        height: 100px;
+        --border-radius: 50%;
+        margin-bottom: 20px;
+        margin-left: 20px;        
+        margin-right: 20px;
+    }
+    .iconeMenu{
+        font-size: 48px;
+        background-size: 48px;                
+    }
+    ion-label{    
+        font-size: 14px;
+    }
+    ion-icon{
+        margin-left: 10px;        
+        margin-right: 10px;
+        font-size: 36px;
+        background-size: 36px;
+    }
+    p{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .meligue{    
+        width: 36px;
+        height: 36px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/telefone.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36px;
+    }
+    .whatsapp{    
+        width: 36px;
+        height: 36px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/whatsapp.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36px;
+    }
+    .instagram{    
+        width: 36px;
+        height: 36px;     
+        border-radius: 50%;
+        --background: none;
+        background-image: url('../../../assets/icon/instagram.png');    
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36px;
+    }
+}
+
+// @media screen and (max-width: 768px) {   
+//     .topo{
+//         height: auto;
+//         padding: 0;
+//     }    
+//     img{
+//         margin: 0;
+//         width: 100%;
+//     } 
+//     ion-button{    
+//         width: 180px;     
+//         height: 180px;
+//         --border-radius: 50%;
+//         margin-bottom: 20px;
+//         margin-left: 20px;        
+//         margin-right: 20px;
+//     }
+//     .iconeMenu{
+//         font-size: 128px;
+//         background-size: 128px;                
+//     }
+//     ion-label{    
+//         font-size: 20px;
+//     }
+//     ion-icon{
+//         margin-left: 10px;        
+//         margin-right: 10px;
+//         font-size: 64px;
+//         background-size: 64px;
+//     }
+//     p{
+//         font-size: 18px;
+//         font-weight: bold;
+//     }
+// }

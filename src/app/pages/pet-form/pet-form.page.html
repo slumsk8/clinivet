@@ -1,0 +1,35 @@
+<ion-header></ion-header>
+<ion-toolbar class="top">
+  <div class="titulo">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button icon="arrow-dropleft" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </div>
+  <!-- <img src="assets/imgs/vet.png"> -->
+</ion-toolbar>
+
+<ion-content>
+  <div class="container">
+    <div class="centro ion-text-center">
+      <div class="imagem"></div>
+      <ion-input autocapitalize="on" [(ngModel)]="pet.nome_pet"  placeholder="Nome"></ion-input>
+      
+      <div class="info">
+        <ion-input class="raca" autocapitalize="on" [(ngModel)]="pet.raca" placeholder="Raca"></ion-input>
+        <ion-datetime class="nasc" displayFormat="DD, MMMM YYYY" [monthNames]="monthNames" [dayShortNames]="dayShortNames" [doneText]='"Ok"' [cancelText]='"Cancelar"' [(ngModel)]="pet.nascimento" placeholder="Nascimento"></ion-datetime>
+      </div>
+      <ion-select  id="selector" class="tutor" [(ngModel)]="pet.id_tutor" placeholder="Tutor" >
+        <ion-select-option *ngFor="let tutor of tutores" value="{{ tutor.id_tutor }}">{{ tutor.nome_tutor }}
+        </ion-select-option>
+      </ion-select>
+      <ion-button color="primary" (click)="onSubmit()" style="margin-top: 30px;">Salvar</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/imgs/rod.png">
+  </ion-toolbar>
+</ion-footer>

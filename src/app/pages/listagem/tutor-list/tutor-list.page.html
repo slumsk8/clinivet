@@ -1,0 +1,62 @@
+<ion-header></ion-header>
+<ion-toolbar class="top">
+  <div class="titulo">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-back-button icon="arrow-dropleft" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </div>
+</ion-toolbar>
+
+<ion-content>
+  <ion-searchbar placeholder="Pesquisar" (ionClear)="doSearchClear()" (ionChange)="doSearchBarChange($event)">
+  </ion-searchbar>
+
+  <ion-list *ngIf="!tutores.length">
+    <ion-item *ngFor="let consulta of [0,1,2]">
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let tutor of tutores">
+      <ion-item button [routerLink]="['/tutor-form/edit/', tutor.id_tutor]">
+        <h2 slot="start" style="font-size: 64px;"> 
+          <ion-icon style="background-image: url('../../../assets/icon/tutor.png');"></ion-icon>
+        </h2>
+        <ion-label>          
+          {{ tutor.nome_tutor}}
+          <p>{{ tutor.email }}</p>
+          <p>{{ tutor.telefone }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="delete(tutor)">
+          <ion-icon slot="top" name="trash"></ion-icon>
+          Excluir
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" [routerLink]="['/home']">
+      <ion-icon name="apps"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
